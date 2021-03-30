@@ -1,3 +1,3 @@
-Git pagina vooor het vak Data sience & iot
+Door Klaas Ketelaar
 
 # Data-sience-iot
