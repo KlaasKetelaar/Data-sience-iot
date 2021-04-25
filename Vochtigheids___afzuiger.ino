@@ -2,10 +2,10 @@
 #include "DHT.h"
 #include "Adafruit_Sensor.h"
 #include <ESP8266WiFi.h>
-String apiKey = "4BE2313OW8ZDU5UM"; // voor thingspeak
-char auth[] = "_7wI68g9Oz2iJ_TIaJ528NItwC8gchf9"; // voor de blynk app
-char ssid[] = "HKWLAN01"; // Enter Your WiFi Name
-char pass[] = "%ketelaarWLAN02%"; // Enter Your Passwword
+String apiKey = ""; // voor thingspeak
+char auth[] = ""; // voor de blynk app
+char ssid[] = ""; // Enter Your WiFi Name
+char pass[] = ""; // Enter Your Passwword
 const char* server = "api.thingspeak.com";
 
 unsigned long previousMillis = 0; // voor de timer van de ventilator zodat hij aan blijft nadat het onder het vochtniveau is.
