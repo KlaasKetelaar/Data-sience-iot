@@ -8,18 +8,23 @@ char ssid[] = ""; // Enter Your WiFi Name
 char pass[] = ""; // Enter Your Passwword
 const char* server = "api.thingspeak.com";
 
-#define DHTTYPE DHT22
-#define DHTPIN 14 
+unsigned long previousMillis = 0; // voor de timer van de ventilator zodat hij aan blijft nadat het onder het vochtniveau is.
+unsigned long startMillis;  // 
+const unsigned long naDraai = 90000; // na draai timer die je zelf kan instellen 
+
+#define DHTTYPE DHT22 // initializeren van de temp en vochtigheids sensor
+#define DHTPIN 14  // pin van de vochtigheidssensor
 DHT dht(DHTPIN, DHTTYPE);
 BlynkTimer timerSensor; // timer gebruik makend van de blynk functionaliteit
-#define led 15
+#define relais 16 // pin van de relais
 WiFiClient client;
 
 
 void sendSensor()
 {
-  float h = dht.readHumidity();
-  float t = dht.readTemperature(); 
+  unsigned long currentMillis = millis();
+  float h = dht.readHumidity(); // read van de vochtigheid
+  float t = dht.readTemperature(); // read van de temp
     
       if (isnan(h) || isnan(t))
       {
@@ -38,13 +43,15 @@ void sendSensor()
   Blynk.virtualWrite(V0, t); // Virtual Pin V5 for Temprature, blynk app configuratie
   Blynk.virtualWrite(V1, h); // Virtual Pin V6 for Humidity
   
-if(h >= 50)
+if(h >= 30) // als vochtigheid > 30 (dit kan je zelf instellen) , laat het relais bekrachtigen
   {
-  digitalWrite(led, HIGH);
+  digitalWrite(relais, HIGH);
   } 
-else 
+else if(currentMillis - previousMillis >= naDraai) // na de zelf ingestelde na draai tijd en als de vochtigheid te laag is dan gaat het relais uit 
   {
-  digitalWrite(led, LOW);
+      digitalWrite(relais, LOW);
+      previousMillis = currentMillis;
+    
   }
 
   if (client.connect(server,80)) { // api connect van thingspeak
@@ -78,8 +85,7 @@ client.stop();
 }
 void setup()
 { 
-  //pinMode(led2, OUTPUT);
-  pinMode(led, OUTPUT);
+  pinMode(relais, OUTPUT);
   Serial.begin(9600);
   dht.begin(); 
   timerSensor.setInterval(20000L, sendSensor);// delay voor thingspeak
@@ -107,7 +113,7 @@ void setup()
   void loop()
 {
   
-  Blynk.run();
+  Blynk.run(); // run voor de blynk app.
   timerSensor.run();
   
 }
