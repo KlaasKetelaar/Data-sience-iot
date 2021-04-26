@@ -14,11 +14,11 @@ je kan dus de vochtigheidsgraad aanpassen (dus wanneer de ventilator aan gaat) h
 in de zomer is het over het algemeen minder vochtig maar stel je gaat douchen dan wil je wel dat de ventilator aan gaat.
 
 Onderdelen: 
-Wemos D1 mini (ESP-8266), /n
-DHT22 vochtigheids sensor,
-Relais SRD-5VDC aansturing ventilator,
-LED voor simulatie van de ventilator,
-aantal kabeltjes
+Wemos D1 mini (ESP-8266),  
+DHT22 vochtigheids sensor,  
+Relais SRD-5VDC aansturing ventilator,  
+LED voor simulatie van de ventilator,  
+aantal kabeltjes  
 
 dit is de fritzing van het projectje
 
