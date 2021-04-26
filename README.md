@@ -24,7 +24,7 @@ dit is de fritzing van het projectje
 
 ![fritzing](https://user-images.githubusercontent.com/79268762/116126980-909f6500-a6c7-11eb-89b5-e5c2ed0738bd.JPG)
 
-een simpele flow of control dat laat zien hoe alles wordt aangestuur en verstuurd:
+een simpele flow of control dat laat zien hoe alles wordt aangestuurd en verstuurd:
 
 ![IoT flow](https://user-images.githubusercontent.com/79268762/116127344-00155480-a6c8-11eb-9f8a-d1f108194fda.JPG)
 
