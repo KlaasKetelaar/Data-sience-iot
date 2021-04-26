@@ -23,6 +23,9 @@ Diode
 1K ohm weerstand en 510 ohm weertstand,  
 aantal kabeltjes  
 
+het relais heb ik aangesloten met een diode en een transistor de diode zorgt er voor dat er geen stroom de verkeerde kant opgaat,  
+en de transistor zorgt er voor dat er een sterk genoeg signaal vanuit de arduino (WeMos) komt zodat het relais dit kan oppikken.  
+
 dit is de fritzing van het projectje
 
 ![fritzing](https://user-images.githubusercontent.com/79268762/116126980-909f6500-a6c7-11eb-89b5-e5c2ed0738bd.JPG)
