@@ -101,7 +101,7 @@ void setup()
    
   WiFi.begin(ssid, pass);
    
-  while (WiFi.status() != WL_CONNECTED) 
+  while (WiFi.status() != WL_CONNECTED) // WiFi connection voor het WeMos board
   {
   delay(500);
   Serial.print(".");
