@@ -18,6 +18,9 @@ Wemos D1 mini (ESP-8266),
 DHT22 vochtigheids sensor,  
 Relais SRD-5VDC aansturing ventilator,  
 LED voor simulatie van de ventilator,  
+NPN transistor  
+Diode  
+1K ohm weerstand en 510 ohm weertstand,  
 aantal kabeltjes  
 
 dit is de fritzing van het projectje
