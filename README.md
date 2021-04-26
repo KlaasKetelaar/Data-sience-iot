@@ -1,4 +1,4 @@
-![fritzing](https://user-images.githubusercontent.com/79268762/116126980-909f6500-a6c7-11eb-89b5-e5c2ed0738bd.JPG)
+
 
 Door Klaas Ketelaar
 
@@ -19,3 +19,6 @@ DHT22 vochtigheids sensor,
 Relais SRD-5VDC aansturing ventilator,
 LED voor simulatie van de ventilator,
 aantal kabeltjes
+
+dit is de fritzing van het projectje
+![fritzing](https://user-images.githubusercontent.com/79268762/116126980-909f6500-a6c7-11eb-89b5-e5c2ed0738bd.JPG)
